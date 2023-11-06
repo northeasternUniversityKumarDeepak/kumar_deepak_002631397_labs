@@ -75,7 +75,7 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnSupplierProfile.setText("Update Profile");
-        btnSupplierProfile.setEnabled(false);
+        btnSupplierProfile.setEnabled(true);
         btnSupplierProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSupplierProfileActionPerformed(evt);
@@ -99,7 +99,7 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
             menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(lblWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addComponent(lblWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnManageProductCatalog)
                 .addGap(18, 18, 18)
@@ -171,6 +171,10 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnSupplierProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupplierProfileActionPerformed
         // TODO add your handling code here:
+        updateSupplierJPanel prjp = new updateSupplierJPanel(workArea, supplier);
+        workArea.add("updateSupplierJPanel", prjp);
+        CardLayout layout = (CardLayout)workArea.getLayout();
+        layout.next(workArea);
     }//GEN-LAST:event_btnSupplierProfileActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
